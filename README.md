@@ -9,21 +9,21 @@ What you'll need
 ----------------
 
  - About 15 minutes
- - {!snippet:prereq-editor-jdk-buildtools}
+ - {!include#prereq-editor-jdk-buildtools}
 
-## {!snippet:how-to-complete-this-guide}
+## {!include#how-to-complete-this-guide}
 
 <a name="scratch"></a>
 Set up the project
 ------------------
 
-{!snippet:build-system-intro}
+{!include#build-system-intro}
 
-{!snippet:create-directory-structure-hello}
+{!include#create-directory-structure-hello}
 
 ### Create a Maven POM
 
-{!snippet:maven-project-setup-options}
+{!include#maven-project-setup-options}
 
 `pom.xml`
 ```xml
@@ -77,7 +77,7 @@ Set up the project
 </project>
 ```
 
-{!snippet:bootstrap-starter-pom-disclaimer}
+{!include#bootstrap-starter-pom-disclaimer}
 
 <a name="initial"></a>
 Creating a Customer object
@@ -183,7 +183,7 @@ Then, we insert some records in our newly created table using `JdbcTemplate`'s `
 Finally we use the `query` method to search our table for records matching our criteria. We again use the "`?`" arguments to parameterize the query, passing in the actual values when we make the call. The last argument in the `query` method is an instance of `RowMapper<T>`, which we provide. Spring's done 90% of the work, but it can't possibly know what we want it to do with the result set data. So, we provide a `RowMapper<T>` instance that Spring will call for each record, aggregate the results, and then give back to us as a collection. 
 
 
-## {!snippet:build-an-executable-jar}
+## {!include#build-an-executable-jar}
 
 
 Run the application
