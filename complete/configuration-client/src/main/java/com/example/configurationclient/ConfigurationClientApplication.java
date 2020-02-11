@@ -19,8 +19,12 @@ public class ConfigurationClientApplication {
 @RestController
 class MessageRestController {
 
-	@Value("${message:Hello default}")
-	private String message;
+
+	private final String message;
+
+	public MessageRestController(@Value("${message:Hello default}") String message) {
+		this.message = message;
+	}
 
 	@RequestMapping("/message")
 	String getMessage() {
